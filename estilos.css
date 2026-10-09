@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background-color: #f1f3f5;
+    color: #1f2937;
+}
+
+.contenedor {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #111827;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #2563eb20;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+form button {
+    margin-top: 2px;
+    background-color: #2563eb;
+}
+
+form button:hover {
+    background-color: #1d4ed8;
+}
+
+#mensaje {
+    margin: 0;
+    color: #dc2626;
+    font-size: 14px;
+}
+
+.lista-contactos {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    min-width: 0;
+    padding: 18px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px #0000000d;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 15px #00000015;
+}
+
+.tarjeta h3 {
+    margin: 0;
+    color: #111827;
+    font-size: 18px;
+}
+
+.tarjeta p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.tarjeta button {
+    width: 100%;
+    margin-top: 5px;
+    background-color: #dc2626;
+}
+
+.tarjeta button:hover {
+    background-color: #b91c1c;
+}
+
+/*formato de telefoonos*/
+@media (max-width: 500px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .contenedor {
+        padding: 18px;
+    }
+
+    .lista-contactos {
+        grid-template-columns: 1fr;
+    }
+}
